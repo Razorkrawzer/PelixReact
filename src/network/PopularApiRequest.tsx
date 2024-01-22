@@ -1,13 +1,14 @@
 import { Result } from "../props/MovieInterface";
 
+const token = process.env.REACT_APP_TMDB_TOKEN;
+
 export const fetchPopularMovies = async () => {
   try {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YjY3NjU1NzM0ZTc1YWY3MzAxOWQ2NDk5NGIyMjg0ZCIsInN1YiI6IjViYWJlOWY0YzNhMzY4M2FjMDAyY2NlNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.I21ZnBFTLqVCHaD87tJTl40jKpm_Y7HgH-ImIezh7lM",
+        Authorization: `Bearer ${token}`,
       },
     };
 
